@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Metallic Corrosion: A Field Reference for Project Engineers. A field reference covering six corrosion types for marine and infrastructure construction, by Sachin Karol.">
+    <link rel="canonical" href="https://sachinkarol.com/metallic-corrosion.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sachinkarol.com/metallic-corrosion.html">
+    <meta property="og:title" content="Metallic Corrosion: A Field Reference for Project Engineers">
+    <meta property="og:description" content="A field reference covering six corrosion types for engineers in marine and infrastructure construction: identification cues, at-risk conditions, and mitigation options.">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Metallic Corrosion: A Field Reference for Project Engineers",
+      "description": "A field reference covering six corrosion types for engineers in marine and infrastructure construction, with identification cues, at-risk conditions, and mitigation options.",
+      "author": {
+        "@type": "Person",
+        "name": "Sachin Karol",
+        "url": "https://sachinkarol.com/"
+      },
+      "about": ["Corrosion", "Materials science", "Marine construction", "Infrastructure engineering"],
+      "inLanguage": "en"
+    }
+    </script>
+    <title>Metallic Corrosion: A Field Reference for Project Engineers · Sachin Karol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-4qMAC16k6VtDKYgrmZa1h.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:             #F4F7FB;
+            --surface:        #FFFFFF;
+            --text-primary:   #1A2B3C;
+            --text-secondary: #4A5C6E;
+            --text-muted:     #5C6E80;
+            --accent:         #2563EB;
+            --accent-hover:   #1D4ED8;
+            --tag-bg:         #E8F0FE;
+            --tag-text:       #1A4CC8;
+            --border:         #DDE4EE;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+        /* ── NAV ── */
+        nav {
+            padding: 28px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-name {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px; font-weight: 500;
+            letter-spacing: 0.10em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .nav-back {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px; font-weight: 500;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.15s ease;
+        }
+        .nav-back:hover { color: var(--accent); }
+        .nav-back::before { content: '\2190  '; }
+
+        /* ── ARTICLE HEADER ── */
+        .doc-head { padding: 56px 0 36px; border-bottom: 1px solid var(--border); }
+        .doc-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
+        .doc-tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 9px; font-weight: 500;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--tag-text); background: var(--tag-bg);
+            padding: 3px 8px; border-radius: 2px;
+        }
+        h1 {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: clamp(30px, 5vw, 42px);
+            font-weight: 700; line-height: 1.12;
+            letter-spacing: -0.02em; color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+        .doc-meta {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px; letter-spacing: 0.06em;
+            color: var(--text-muted); text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .doc-meta span + span::before { content: ' · '; }
+        .doc-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px; font-weight: 500;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            text-decoration: none; padding: 9px 16px; border-radius: 3px;
+            transition: all 0.15s ease;
+        }
+        .btn-primary { color: #fff; background: var(--accent); }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-ghost { color: var(--accent); border: 1px solid var(--border); background: var(--surface); }
+        .btn-ghost:hover { border-color: var(--accent); }
+
+        /* ── ARTICLE BODY ── */
+        article { padding: 8px 0 40px; }
+        article h2 {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 24px; font-weight: 700;
+            letter-spacing: -0.01em; color: var(--text-primary);
+            margin: 46px 0 8px; padding-top: 18px;
+            border-top: 1px solid var(--border);
+        }
+        article h2.no-rule { border-top: none; padding-top: 0; }
+        article h3 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 13px; font-weight: 600;
+            letter-spacing: 0.04em; text-transform: uppercase;
+            color: var(--accent); margin: 24px 0 6px;
+        }
+        article p { color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+        article .lede { font-size: 17px; color: var(--text-secondary); }
+
+        /* ── TABLE ── */
+        .table-scroll { overflow-x: auto; margin: 18px 0 8px; border: 1px solid var(--border); border-radius: 4px; -webkit-overflow-scrolling: touch; }
+        table { border-collapse: collapse; width: 100%; min-width: 720px; background: var(--surface); font-size: 13px; }
+        thead th {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            color: var(--text-primary); text-align: left;
+            padding: 12px 14px; background: var(--tag-bg);
+            border-bottom: 1px solid var(--border);
+            vertical-align: bottom;
+        }
+        tbody td { padding: 12px 14px; color: var(--text-secondary); line-height: 1.55; vertical-align: top; border-bottom: 1px solid var(--border); }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody th {
+            padding: 12px 14px; text-align: left; vertical-align: top;
+            font-weight: 600; color: var(--text-primary);
+            border-bottom: 1px solid var(--border); white-space: nowrap;
+        }
+        tbody tr:last-child th { border-bottom: none; }
+        .table-hint {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px; color: var(--text-muted);
+            letter-spacing: 0.04em; margin-bottom: 20px;
+        }
+
+        /* ── GLOSSARY ── */
+        dl { margin: 8px 0; }
+        dt { font-weight: 600; color: var(--text-primary); margin-top: 16px; }
+        dd { color: var(--text-secondary); line-height: 1.7; margin-left: 0; }
+
+        /* ── REFERENCES ── */
+        .refs { list-style: none; }
+        .refs li { color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; padding-left: 18px; text-indent: -18px; font-size: 14px; }
+        .refs a { color: var(--accent); text-decoration: none; word-break: break-word; }
+        .refs a:hover { text-decoration: underline; }
+
+        /* ── FOOTER ── */
+        footer { padding: 30px 0; border-top: 1px solid var(--border); margin-top: 20px; }
+        .footer-text { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--text-muted); letter-spacing: 0.08em; }
+
+        @media (max-width: 620px) {
+            .doc-head { padding: 40px 0 28px; }
+            article h2 { font-size: 21px; }
+        }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+        /* ── PRINT (for PDF generation) ── */
+        @media print {
+            body { background: #fff; font-size: 11pt; }
+            nav, .doc-actions, .nav-back, footer, .table-hint { display: none; }
+            .container { max-width: 100%; padding: 0; }
+            .table-scroll { overflow: visible; border: none; }
+            table { min-width: 0; width: 100%; table-layout: fixed; font-size: 7.5pt; }
+            thead th, tbody td, tbody th { padding: 5px 7px; white-space: normal; word-break: break-word; overflow-wrap: break-word; }
+            thead th:nth-child(1) { width: 15%; }
+            thead th:nth-child(2) { width: 22%; }
+            thead th:nth-child(3) { width: 21%; }
+            thead th:nth-child(4) { width: 21%; }
+            thead th:nth-child(5) { width: 21%; }
+            article h2 { page-break-after: avoid; }
+            article h3 { page-break-after: avoid; }
+            p, li { orphans: 3; widows: 3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <nav aria-label="Site navigation">
+            <a href="index.html" class="nav-name">Sachin Karol</a>
+            <a href="index.html#portfolio" class="nav-back">Back to portfolio</a>
+        </nav>
+
+        <header class="doc-head">
+            <div class="doc-tags" aria-label="Document types">
+                <span class="doc-tag">Reference Guide</span>
+                <span class="doc-tag">Materials Science</span>
+            </div>
+            <h1>Metallic Corrosion: A Field Reference for Project Engineers</h1>
+            <p class="doc-meta"><span>Sachin Karol</span><span>July 2026</span></p>
+            <div class="doc-actions">
+                <a href="assets/Metallic-Corrosion-Reference-Sachin-Karol.pdf" class="btn btn-primary" aria-label="Download PDF">Download PDF</a>
+                <a href="index.html#portfolio" class="btn btn-ghost">More work</a>
+            </div>
+        </header>
+
+        <article>
+
+            <h2 class="no-rule">Introduction</h2>
+            <p class="lede">Corrosion is a naturally occurring chemical or electrochemical process between a metal and its environment that results in the degradation of the metal and its properties. It is of critical importance in marine and infrastructure construction for both cost and safety reasons. The Association for Materials Protection and Performance reports that losses owing to corrosion are as high as $2.5 trillion USD annually, which is approximately 3.4% of the global Gross Domestic Product. Depending on the metal and corroding environment involved, corrosion can be classified as either uniform or localized (galvanic, pitting, crevice, stress corrosion cracking, and erosion corrosion). Corrosion-related decisions are typically made by engineers and involve choosing the appropriate metal and methods of mitigating its corrosion. Because corrosion mechanisms vary significantly, so do strategies for preventing it. This document is a guide for personnel working in marine or infrastructure construction environments who need to identify corrosion types, understand their causes, and make informed mitigation decisions.</p>
+
+            <h2>How to Use This Guide</h2>
+            <p>This guide describes each corrosion type across four subsections: what it is, how to identify it, what drives it, and how to mitigate it. It also includes a reference table for quick lookup. Finally, it includes a glossary of the key terms used throughout the guide.</p>
+
+            <h2>Uniform Corrosion</h2>
+            <h3>What It Is</h3>
+            <p>Uniform corrosion is the most common form of corrosion and is characterized by corrosion over the entire or a large portion of the surface area of the metal. It tends to occur on uniform surfaces lacking preferential sites for attack.</p>
+            <h3>How to Identify It</h3>
+            <p>In most cases, it can be identified based on changes in appearance such as discoloration. It usually results in uniform etching or the formation of a rust layer and can be predicted based on measurable reductions in the thickness of the corroded structure.</p>
+            <h3>What Drives It</h3>
+            <p>It is generally caused by exposure to oxygen, moisture, acids, or salts. Marine and infrastructure environments are particularly conducive to uniform corrosion because of the simultaneous presence of saltwater and high humidity and atmospheric exposure.</p>
+            <h3>How to Mitigate It</h3>
+            <p>It can be mitigated by using protective coatings on the exposed surface. Other options include cathodic protection (using sacrificial anodes or an impressed current system to direct the corrosive attack away from the primary structure), controlling environmental factors such as humidity and pH, and using chemical corrosion inhibitors.</p>
+
+            <h2>Galvanic Corrosion</h2>
+            <h3>What It Is</h3>
+            <p>Galvanic corrosion is the result of an electrochemical reaction in a galvanic cell, which is formed when two dissimilar metals in electrical contact are submerged or wetted by an electrolyte. Current flows from the anode (the more reactive or less noble metal) to the cathode (the less reactive or more noble metal) through the electrolyte, and from the cathode to the anode through the metallic connection. The anode oxidizes and loses material, while the cathode is protected. The driving force is the difference in the electrode potentials of the two metals. Metals can be ranked in a galvanic series based on their corrosion potential in a given electrolyte. Metals closer in the series are safer to use together than those far apart.</p>
+            <h3>How to Identify It</h3>
+            <p>Corrosion occurs at or near the junction between the two different metals. The anode metal shows pitting or wastage, while the cathode remains visually clean or may show deposits. In addition, a white or powdery deposit at the interface often indicates that the anode is aluminum or zinc.</p>
+            <h3>What Drives It</h3>
+            <p>Galvanic corrosion occurs when the following three conditions are met: the presence of dissimilar metals, an electrical contact between them, and their exposure to a common electrolyte. The driving force is the difference in the electrode potentials of the two metals. However, the most critical factor is the area ratio of the anode and cathode. A small anode coupled to a large cathode results in aggressive corrosion. The anodic current density is high, leading to rapid and concentrated material loss. On the other hand, a large anode coupled to a small cathode is relatively benign. This is why copper rivets in a steel plate are less damaging than steel rivets in a copper plate.</p>
+            <h3>How to Mitigate It</h3>
+            <p>Strategies for mitigation include using compatible metals together (closer in the galvanic series), breaking the electrical path by using nonconductive gaskets, sleeves, or coatings, applying a protective coating to the cathode instead of the anode (coating the anode alone concentrates attack at any coating defects), using sacrificial anodes (zinc or magnesium deliberately coupled to the structure to be the preferential anode), and designing to ensure a favorable area ratio.</p>
+
+            <h2>Pitting Corrosion</h2>
+            <h3>What It Is</h3>
+            <p>Pitting corrosion is similar to galvanic corrosion in that it also involves an electrochemical galvanic reaction. However, pitting occurs on a single metal, when its naturally forming passive oxide film coating breaks down. Metals particularly susceptible to it include stainless steel and aluminum; titanium is susceptible only at elevated temperatures.</p>
+            <h3>How to Identify It</h3>
+            <p>It can be identified based on the presence of small pits or perforations on the metal surface and a rough or undercut interior. The pits may be obscured by corrosion products, but the surrounding surface is usually intact.</p>
+            <h3>What Drives It</h3>
+            <p>Pitting requires a susceptible metal, an aggressive ion (chloride is the primary one in marine and infrastructure settings), and a local breakdown site. It is driven by the breakdown of the thin passive oxide film that forms naturally on metals in the presence of ions such as chloride, leading to small anodic sites, while the surrounding intact surface film acts as the cathode. This results in small galvanic cells. Once such pits form, the chemistry within them changes. The local environment becomes acidic and depleted of oxygen, which prevents the passive film from reforming. The pits accelerate their own growth. Thus, while the surface can look nearly pristine, the pits can propagate deep into the material. Hence, pitting can be extremely dangerous, as the visible damage may dramatically understate the actual penetration.</p>
+            <h3>How to Mitigate It</h3>
+            <p>Mitigation strategies include using alloys with higher pitting resistance (pitting resistance is quantified by the PREN, or Pitting Resistance Equivalent Number, in stainless steels), avoiding chloride-containing environments, maintaining the thin passive film through surface treatments or coatings, using cathodic protection, and using designs that avoid stagnant zones where aggressive ions can concentrate.</p>
+
+            <h2>Crevice Corrosion</h2>
+            <h3>What It Is</h3>
+            <p>Crevice corrosion is a highly localized form of corrosion that occurs in narrow gaps or crevices between two surfaces, where a stagnant electrolyte gets trapped. These gaps can be metal-to-metal or metal-to-nonmetal. The trapped electrolyte becomes isolated from the bulk electrolyte. The oxygen within the crevices is depleted rapidly, resulting in an oxygen concentration cell: the crevice interior becomes anodic (corrodes) while the exterior surface becomes cathodic (protected). This turns the interior environment of the crevices even more acidic and chloride-enriched, thus accelerating the attack. This self-reinforcing chemistry is sometimes called the autocatalytic mechanism.</p>
+            <h3>How to Identify It</h3>
+            <p>Damage is confined to or just outside the crevice, while the surrounding surfaces look intact. Common corrosion sites include under fasteners, gaskets, threaded connections, lap joints, and bolt heads. It is also found under marine growth and debris. It is often invisible until the joint is disassembled. It can be distinguished from pitting by its location: pitting initiates on open surfaces while crevice corrosion requires a geometric trap.</p>
+            <h3>What Drives It</h3>
+            <p>It is primarily driven by gap geometry. Gaps wide enough (roughly 0.025 to 0.1 mm for stainless steel) to allow an electrolyte in but narrow enough to restrict its flow initiate it. High chloride concentration and temperature, and low oxygen availability all accelerate it. Passive alloys (stainless steels, aluminum, and, at elevated temperatures, titanium) are particularly susceptible because their passive film depends on oxygen to maintain itself.</p>
+            <h3>How to Mitigate It</h3>
+            <p>It can be mitigated through careful design and maintenance. Mitigation strategies include design optimization (avoiding lap joints, bolted connections, or rivets where possible), sealing gaps using appropriate gasket materials and sealants, selecting suitable material (alloys with higher resistance to chlorides, such as molybdenum-containing stainless steels), and performing regular maintenance (removing debris and flushing out stagnant areas). One should also avoid wrapping metals with moisture-retaining materials like plastic or tape. Cathodic protection is also a widely used option.</p>
+
+            <h2>Stress Corrosion Cracking</h2>
+            <h3>What It Is</h3>
+            <p>Stress corrosion cracking (SCC) is the deterioration of a susceptible metal alloy via the formation of microscopic cracks in it when it is subjected to sustained tensile stress in a particular corrosive environment. All three factors must be present for SCC to occur, which can lead to sudden rupture and brittle-type failure of ductile materials with little to no visible loss of material.</p>
+            <h3>How to Identify It</h3>
+            <p>SCC is particularly difficult to identify because the cracks initiate at the microscale, and the alloy surface usually looks completely normal right up until it suddenly fails. SCC results in the formation of cracks with a "lightning bolt" pattern perpendicular to the tensile stress (the surrounding metal surface usually has little to no rust or overall corrosion damage). To identify it in the field, one must look for these microscopic cracks using non-destructive methods such as dye penetrant and ultrasonic inspection. Inspection in the lab involves analyzing a sample under a microscope for intergranular (along grain boundaries) or transgranular (through the grains) cracks.</p>
+            <h3>What Drives It</h3>
+            <p>The three conditions (susceptible alloy, sustained tensile stress, and specific corrosive environment) must be met. The stress can be applied or residual (from welding or cold forming). In fact, residual stress is often the greater contributor. The environment-alloy pairing is specific: chlorides with austenitic stainless steel (used extensively in marine applications), ammonia with brass, caustic solutions with carbon steel. Elevated temperatures accelerate chloride SCC significantly, typically above roughly 50-60&deg;C.</p>
+            <h3>How to Mitigate It</h3>
+            <p>It can be mitigated by removing one of the three factors. Strategies include reducing the tensile stress (post-weld stress-relief annealing, avoiding stress concentrators during design, shot peening to compress the surface), selecting resistant materials (duplex stainless steels or higher-nickel alloys for chloride environments), or controlling the environment (limit chloride concentration and temperature). Coatings and cathodic protection can also help; however, cathodic protection on high-strength steels can introduce hydrogen embrittlement, a related but distinct cracking mechanism.</p>
+
+            <h2>Erosion Corrosion</h2>
+            <h3>What It Is</h3>
+            <p>Erosion corrosion is accelerated corrosion because of the combined effects of mechanical wear and electrochemical attack, occurring when there is relative movement between a corrosive fluid and the metal surface. The moving fluid removes the microscopic protective oxide layer from the metal surface; this layer prevents corrosion under normal circumstances. The continuous stripping exposes fresh metal faster than the film can reform, resulting in accelerated attack. Erosion corrosion is distinct from pure mechanical erosion in that it requires that both components (mechanical wear and electrochemical attack) be present. Cavitation (vapor bubble collapse) and impingement are recognized sub-forms.</p>
+            <h3>How to Identify It</h3>
+            <p>The corroded surface displays distinct grooves, waves, valleys, gullies, or horseshoe-shaped pits that are aligned along the fluid flow. The affected areas often look bright, clean, and shiny because the constant fluid flow sweeps away the corrosion deposits before they can accumulate. Damage is concentrated where the flow is disturbed, such as elbows, bends, tees, pump impellers, valves, and heat exchanger tube inlets.</p>
+            <h3>What Drives It</h3>
+            <p>The primary driver is the flow velocity of the corrosive liquid. Many alloys have a critical velocity above which attack accelerates sharply. Other influencing factors include turbulence, entrained solids or gas bubbles, and impingement angle. Materials that are particularly susceptible include soft metals (copper and its alloys, which are used extensively in seawater piping) and any metal relying on a passive film that the flow can strip faster than it reforms. Temperature accelerates the process.</p>
+            <h3>How to Mitigate It</h3>
+            <p>Erosion corrosion can be mitigated by removing or weakening either of its two components, namely, mechanical wear and electrochemical attack. Strategies include velocity reduction by using pipes of larger diameter (this decreases the speed of the corrosive fluid, minimizing turbulence and mechanical impact), streamlining flow (eliminating sharp bends, blockages, or rough edges in piping to make the flow smoother), filtration (removing entrained solids), and using impingement plates or thicker sacrificial wall sections at known attack points. In addition, selecting more erosion-resistant materials (such as cupronickel instead of brass for seawater service), applying wear-resistant coatings, and using corrosion inhibitors can also help.</p>
+
+            <h2>Quick Reference Table</h2>
+            <div class="table-scroll" role="region" aria-label="Quick reference comparison table" tabindex="0">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Distinguishing Feature</th>
+                            <th scope="col">Where to Look</th>
+                            <th scope="col">Primary Driver</th>
+                            <th scope="col">First-Line Mitigation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Uniform Corrosion</th>
+                            <td>General attack across the entire surface; predictable thickness loss</td>
+                            <td>Entire or large portion of the surface</td>
+                            <td>Exposure to oxygen, moisture, acids, or salts</td>
+                            <td>Protective coatings</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Galvanic Corrosion</th>
+                            <td>Junction attack; anode corrodes while cathode remains clean</td>
+                            <td>At or near the junction between two different metals</td>
+                            <td>Dissimilar metals + electrical contact + common electrolyte</td>
+                            <td>Compatible metals (close in the galvanic series)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pitting Corrosion</th>
+                            <td>Single metal; localized deep penetration, surrounding surface intact</td>
+                            <td>Open surfaces; pits often obscured by corrosion products</td>
+                            <td>Breakdown of thin passive oxide film in presence of corrosive ions such as chloride</td>
+                            <td>Alloys with higher pitting resistance</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Crevice Corrosion</th>
+                            <td>Highly localized; requires a geometric trap (narrow gaps between two surfaces)</td>
+                            <td>Within or just outside crevices (under fasteners, gaskets, threaded connections, lap joints)</td>
+                            <td>Gap geometry</td>
+                            <td>Optimized design and regular maintenance</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stress Corrosion Cracking</th>
+                            <td>Only type requiring mechanical stress; damage mode is cracking, not material loss</td>
+                            <td>No visible warning signs; inspect near welds and cold-formed regions (residual stress) with dye penetrant or ultrasonic methods</td>
+                            <td>Susceptible alloy + sustained tensile stress + specific corrosive environment</td>
+                            <td>Removal of any one of the three factors</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Erosion Corrosion</th>
+                            <td>Flow-pattern-following damage (grooves, horseshoe pits) on clean, deposit-free metal</td>
+                            <td>Elbows, bends, tees, pump impellers, valves, heat exchanger inlets, wherever flow is disturbed</td>
+                            <td>Flow velocity of the corrosive fluid</td>
+                            <td>Pipes of larger diameter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-hint">Scroll the table horizontally to see all columns.</p>
+
+            <h2>Glossary</h2>
+            <dl>
+                <dt>anode / cathode</dt>
+                <dd>The anode is the electrode that undergoes oxidation and loses material, while the cathode is the electrode that undergoes reduction and is protected from attack.</dd>
+                <dt>cathodic protection</dt>
+                <dd>Technique for limiting the corrosion of a metal surface in contact with a conductive electrolyte; achieved by making it the cathode of an electrochemical cell and using sacrificial anodes or an impressed current system.</dd>
+                <dt>cavitation</dt>
+                <dd>The formation and sudden collapse of vapor bubbles within a liquid owing to rapid, localized pressure changes.</dd>
+                <dt>corrosion inhibitor</dt>
+                <dd>Chemical compound that can reduce or completely prevent the corrosion process; usually added in small concentrations to the corrosive environment.</dd>
+                <dt>electrode potential</dt>
+                <dd>The electrical voltage that develops when a metal is dipped into a solution of its own ions; indicative of the metal's tendency to gain or lose electrons.</dd>
+                <dt>electrolyte</dt>
+                <dd>A substance that conducts electric current by dissociating into positively and negatively charged ions.</dd>
+                <dt>galvanic series</dt>
+                <dd>Arrangement of metals and alloys based on their corrosion potentials in a given environment (most commonly aerated seawater).</dd>
+                <dt>hydrogen embrittlement</dt>
+                <dd>Decrease in the ductility and subsequent fracturing of metals under tensile stress; caused by the introduction of hydrogen into the metal's crystal structure.</dd>
+                <dt>impingement</dt>
+                <dd>Corrosion caused by the high-velocity striking of a flowing fluid against a solid surface.</dd>
+                <dt>impressed current</dt>
+                <dd>Current, supplied by an external DC source, to make the protected structure the cathode and hence prevent metallic corrosion.</dd>
+                <dt>intergranular</dt>
+                <dd>Existing or occurring along the boundaries between the crystal grains of a material.</dd>
+                <dt>noble (as in "less noble metal")</dt>
+                <dd>Resistant to corrosion and oxidation; in a galvanic couple, the less noble (more reactive) metal becomes the anode and corrodes preferentially.</dd>
+                <dt>oxygen concentration cell</dt>
+                <dd>A battery-like system in which current flows because two regions of a metal surface are exposed to different oxygen concentrations; the oxygen-poor region becomes the anode.</dd>
+                <dt>passive film / passive oxide film</dt>
+                <dd>An ultra-thin oxide layer that forms spontaneously on a metal surface and protects it from further corrosion.</dd>
+                <dt>PREN (Pitting Resistance Equivalent Number)</dt>
+                <dd>A theoretical measure used to compare the pitting corrosion resistance of stainless steel alloys.</dd>
+                <dt>residual stress</dt>
+                <dd>The stress present in a material in the absence of an externally applied load.</dd>
+                <dt>sacrificial anode</dt>
+                <dd>A piece of a highly active metal (magnesium, aluminum, or zinc) attached to a metal structure to prevent its corrosion; the anode, because of its high reactivity, corrodes instead.</dd>
+                <dt>shot peening</dt>
+                <dd>A cold work process used to impart compressive residual stresses in a metal surface in order to modify its mechanical properties.</dd>
+                <dt>stress-relief annealing</dt>
+                <dd>Heat treatment performed to relieve the stress generated in a metal during manufacturing processes such as welding or cold forming.</dd>
+                <dt>transgranular</dt>
+                <dd>Existing or occurring through the crystal grains of a material.</dd>
+            </dl>
+
+            <h2>References</h2>
+            <p>The technical content of this guide was verified against the following sources.</p>
+            <ul class="refs">
+                <li>AMPP (Association for Materials Protection and Performance). "Cathodic Protection (CP) for Corrosion Control." Accessed July 2026. <a href="https://www.ampp.org/technical-research/what-is-corrosion/cathodic-protection-for-corrosion-control" target="_blank" rel="noopener noreferrer">Link</a></li>
+                <li>AMPP (Association for Materials Protection and Performance). "Corrosion Basics." Accessed July 2026. <a href="https://www.ampp.org/technical-research/impact/corrosion-basics" target="_blank" rel="noopener noreferrer">Link</a></li>
+                <li>NACE International. <em>International Measures of Prevention, Application, and Economics of Corrosion Technologies (IMPACT) Study.</em> 2016. <a href="http://impact.nace.org/" target="_blank" rel="noopener noreferrer">Link</a></li>
+                <li>U.S. Naval Academy. "Corrosion Types." Chapter 5, <em>EN380 Naval Materials Science and Engineering Course Notes.</em> <a href="https://www.usna.edu/NAOE/_files/documents/Courses/EN380/Course_Notes/Ch05_Corrosion_Types.pdf" target="_blank" rel="noopener noreferrer">Link</a></li>
+            </ul>
+
+        </article>
+
+        <footer>
+            <p class="footer-text">Sachin Karol &middot; Toronto &middot; 2026</p>
+        </footer>
+
+    </div>
+</body>
+</html>
