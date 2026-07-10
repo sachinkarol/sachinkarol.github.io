@@ -3,11 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sachin Karol, Technical Writer and Scientific Editor based in Toronto.">
-    <title>Sachin Karol · Technical Writer & Scientific Editor</title>
+    <meta name="description" content="Sachin Karol, Scientific Editor and Technical Writer based in Toronto. Thirteen years and 2,400+ edited peer-reviewed manuscripts across materials science, engineering, and the physical and life sciences.">
+    <link rel="canonical" href="https://sachinkarol.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sachinkarol.com/">
+    <meta property="og:title" content="Sachin Karol · Scientific Editor & Technical Writer">
+    <meta property="og:description" content="Scientific editing and technical documentation grounded in domain knowledge. Thirteen years and 2,400+ edited peer-reviewed manuscripts.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sachin Karol · Scientific Editor & Technical Writer">
+    <meta name="twitter:description" content="Scientific editing and technical documentation grounded in domain knowledge. Thirteen years and 2,400+ edited peer-reviewed manuscripts.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sachin Karol",
+      "url": "https://sachinkarol.com/",
+      "jobTitle": "Scientific Editor & Technical Writer",
+      "description": "Scientific editor and technical writer based in Toronto. Thirteen years and more than 2,400 edited peer-reviewed manuscripts across materials science, engineering, and the physical and life sciences.",
+      "email": "mailto:sachin.karol@outlook.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Illinois Chicago"
+      },
+      "knowsAbout": [
+        "Scientific editing",
+        "Technical writing",
+        "API documentation",
+        "Materials science",
+        "Peer-reviewed manuscript editing"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/sachinkarol/",
+        "https://scholar.google.com/citations?user=szmWle4AAAAJ&hl=en"
+      ]
+    }
+    </script>
+    <title>Sachin Karol · Scientific Editor & Technical Writer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-4qMAC16k6VtDKYgrmZa1h.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -20,7 +66,7 @@
             --surface:        #FFFFFF;
             --text-primary:   #1A2B3C;
             --text-secondary: #4A5C6E;
-            --text-muted:     #8096A8;
+            --text-muted:     #5C6E80;
             --accent:         #2563EB;
             --accent-hover:   #1D4ED8;
             --tag-bg:         #E8F0FE;
@@ -59,7 +105,7 @@
 
         .nav-name {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             letter-spacing: 0.10em;
             color: var(--text-muted);
@@ -74,7 +120,7 @@
         }
 
         .nav-links a {
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 500;
             color: var(--text-secondary);
             text-decoration: none;
@@ -93,7 +139,7 @@
 
         .hero-eyebrow {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
+            font-size: 13px;
             font-weight: 500;
             letter-spacing: 0.16em;
             color: var(--accent);
@@ -143,12 +189,49 @@
 
         .section-label {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 500;
             letter-spacing: 0.18em;
             color: var(--text-muted);
             text-transform: uppercase;
             margin-bottom: 40px;
+        }
+
+        /* ── TABS ── */
+        .tabs {
+            display: flex;
+            gap: 4px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+        }
+
+        .tab {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: none;
+            border: none;
+            padding: 10px 16px;
+            margin-bottom: -1px;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .tab:hover { color: var(--text-secondary); }
+        .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+        .tab-panel[hidden] { display: none; }
+
+        .panel-intro {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.72;
+            max-width: 620px;
+            margin-bottom: 28px;
         }
 
         /* ── PORTFOLIO GRID ── */
@@ -194,7 +277,7 @@
 
         .doc-tag {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 9px;
+            font-size: 11px;
             font-weight: 500;
             letter-spacing: 0.14em;
             text-transform: uppercase;
@@ -206,7 +289,7 @@
 
         .card-title {
             font-family: 'IBM Plex Serif', serif;
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 600;
             color: var(--text-primary);
             line-height: 1.25;
@@ -226,17 +309,19 @@
             align-items: center;
             gap: 5px;
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 500;
             letter-spacing: 0.10em;
             color: var(--accent);
             text-decoration: none;
             text-transform: uppercase;
+            text-underline-offset: 3px;
             transition: color 0.15s ease;
         }
 
         .card-link:hover {
             color: var(--accent-hover);
+            text-decoration: underline;
         }
 
         .card-link::after {
@@ -324,7 +409,7 @@
 
         .footer-text {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 10px;
+            font-size: 12px;
             color: var(--text-muted);
             letter-spacing: 0.08em;
         }
@@ -366,19 +451,21 @@
         <nav aria-label="Site navigation">
             <a href="#" class="nav-name">Sachin Karol</a>
             <ul class="nav-links">
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#portfolio" data-tab-link="tw">Technical Writing</a></li>
+                <li><a href="#portfolio" data-tab-link="ed">Editing</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="assets/Sachin-Karol-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
         <section class="hero" aria-label="Introduction">
-            <p class="hero-eyebrow">Technical Writer · Scientific Editor</p>
+            <p class="hero-eyebrow">Scientific Editor · Technical Writer</p>
             <h1 class="hero-name">Sachin Karol</h1>
             <p class="hero-tagline">Documentation grounded in domain knowledge.</p>
             <p class="hero-statement">
-                I write <strong>technical documentation for software and APIs</strong> and edit
-                <strong>scientific manuscripts</strong> for publication in peer-reviewed journals.
+                I edit <strong>scientific manuscripts</strong> for publication in peer-reviewed
+                journals and write <strong>technical documentation for software and APIs</strong>.
                 Thirteen years and more than 2,400 edited manuscripts taught me when precision
                 is non-negotiable and when plain language serves the reader better.
             </p>
@@ -386,7 +473,14 @@
 
         <section class="section" id="portfolio" aria-labelledby="portfolio-label">
             <p class="section-label" id="portfolio-label">Portfolio</p>
-            <div class="portfolio-grid">
+
+            <div class="tabs" role="tablist" aria-label="Portfolio tracks">
+                <button class="tab active" role="tab" id="tab-tw" aria-controls="panel-tw" aria-selected="true" data-tab="tw">Technical Writing</button>
+                <button class="tab" role="tab" id="tab-ed" aria-controls="panel-ed" aria-selected="false" data-tab="ed">Editing</button>
+            </div>
+
+            <div class="tab-panel" id="panel-tw" role="tabpanel" aria-labelledby="tab-tw">
+                <div class="portfolio-grid">
 
                 <article class="portfolio-card">
                     <div class="doc-tags" aria-label="Document types">
@@ -418,8 +512,8 @@
                     <a href="assets/SurfReport-API-Reference-Sachin-Karol.pdf" class="card-link" aria-label="View Surf Report API Reference">View document</a>
                 </article>
 
-                <article class="portfolio-card coming-soon" aria-label="Upcoming portfolio piece">
-                    <div class="doc-tags">
+                <article class="portfolio-card">
+                    <div class="doc-tags" aria-label="Document types">
                         <span class="doc-tag">Reference Guide</span>
                         <span class="doc-tag">Materials Science</span>
                     </div>
@@ -428,11 +522,99 @@
                         Field reference covering six corrosion types for engineers in marine and
                         infrastructure construction. Each entry gives identification cues, at-risk
                         conditions, and mitigation options, with a quick-reference comparison table.
-                        In progress.
                     </p>
-                    <span class="card-link">Coming soon</span>
+                    <a href="metallic-corrosion.html" class="card-link" aria-label="Read Metallic Corrosion field reference">View document</a>
                 </article>
 
+                <article class="portfolio-card coming-soon" aria-label="Upcoming portfolio piece">
+                    <div class="doc-tags">
+                        <span class="doc-tag">Structured Authoring</span>
+                        <span class="doc-tag">DITA</span>
+                    </div>
+                    <h2 class="card-title">DITA Structured Authoring Sample</h2>
+                    <p class="card-description">
+                        A topic-based set (task, concept, and reference types) authored in DITA
+                        (Darwin Information Typing Architecture), showing structured, reusable
+                        documentation built to an industry XML standard.
+                    </p>
+                    <span class="card-link">In progress</span>
+                </article>
+
+                <article class="portfolio-card coming-soon" aria-label="Upcoming portfolio piece">
+                    <div class="doc-tags">
+                        <span class="doc-tag">API Reference</span>
+                        <span class="doc-tag">Materials Science</span>
+                    </div>
+                    <h2 class="card-title">Materials-Science API Reference</h2>
+                    <p class="card-description">
+                        An original API reference for a public materials-science database
+                        (Materials Project / OQMD class), rewritten and audience-calibrated
+                        from thin official documentation. Domain credibility fused with
+                        API documentation.
+                    </p>
+                    <span class="card-link">In progress</span>
+                </article>
+
+                </div>
+            </div>
+
+            <div class="tab-panel" id="panel-ed" role="tabpanel" aria-labelledby="tab-ed" hidden>
+                <p class="panel-intro">Annotated before/after edits on open-access (CC-BY) research excerpts, each showing tracked changes and the editorial reasoning behind them, across the sciences.</p>
+                <div class="portfolio-grid">
+
+                    <article class="portfolio-card coming-soon" aria-label="Upcoming editing sample">
+                        <div class="doc-tags">
+                            <span class="doc-tag">Before / After</span>
+                            <span class="doc-tag">Materials Science</span>
+                        </div>
+                        <h2 class="card-title">Editing Sample 1</h2>
+                        <p class="card-description">
+                            Annotated substantive edit of a CC-BY materials-science excerpt.
+                            Source paper to be selected.
+                        </p>
+                        <span class="card-link">In progress</span>
+                    </article>
+
+                    <article class="portfolio-card coming-soon" aria-label="Upcoming editing sample">
+                        <div class="doc-tags">
+                            <span class="doc-tag">Before / After</span>
+                            <span class="doc-tag">Life Sciences</span>
+                        </div>
+                        <h2 class="card-title">Editing Sample 2</h2>
+                        <p class="card-description">
+                            Annotated substantive edit of a CC-BY life-sciences excerpt.
+                            Source paper to be selected.
+                        </p>
+                        <span class="card-link">In progress</span>
+                    </article>
+
+                    <article class="portfolio-card coming-soon" aria-label="Upcoming editing sample">
+                        <div class="doc-tags">
+                            <span class="doc-tag">Before / After</span>
+                            <span class="doc-tag">Energy / Environment</span>
+                        </div>
+                        <h2 class="card-title">Editing Sample 3</h2>
+                        <p class="card-description">
+                            Annotated substantive edit of a CC-BY energy or environmental-science
+                            excerpt. Source paper to be selected.
+                        </p>
+                        <span class="card-link">In progress</span>
+                    </article>
+
+                    <article class="portfolio-card coming-soon" aria-label="Upcoming editing sample">
+                        <div class="doc-tags">
+                            <span class="doc-tag">Before / After</span>
+                            <span class="doc-tag">Physics / Engineering</span>
+                        </div>
+                        <h2 class="card-title">Editing Sample 4</h2>
+                        <p class="card-description">
+                            Annotated substantive edit of a CC-BY physics or engineering excerpt.
+                            Source paper to be selected.
+                        </p>
+                        <span class="card-link">In progress</span>
+                    </article>
+
+                </div>
             </div>
         </section>
 
@@ -440,10 +622,10 @@
             <p class="section-label" id="about-label">About</p>
             <div class="about-text">
                 <p>
-                    I am a technical writer and scientific editor based in Toronto. My background
-                    is in bioengineering (M.S., University of Illinois Chicago) and I spent
-                    13 years at Cactus Communications editing more than 2,400 peer-reviewed
-                    manuscripts across materials science, engineering, physical sciences, and
+                    I am a scientific editor and technical writer based in Toronto. My background
+                    is in bioengineering (M.S., University of Illinois Chicago), and I spent
+                    13 years at Cactus Communications, editing more than 2,400 peer-reviewed
+                    manuscripts across materials science, engineering, and the physical and
                     life sciences.
                 </p>
                 <p>
@@ -470,7 +652,7 @@
                 <div class="contact-item">
                     <span class="contact-label">LinkedIn</span>
                     <span class="contact-value">
-                        <a href="https://www.linkedin.com/in/sachin-karol/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sachin-karol</a>
+                        <a href="https://www.linkedin.com/in/sachinkarol/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sachinkarol</a>
                     </span>
                 </div>
                 <div class="contact-item">
@@ -485,5 +667,29 @@
         </footer>
 
     </div>
+
+    <script>
+        (function () {
+            var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+            var panelTw = document.getElementById('panel-tw');
+            var panelEd = document.getElementById('panel-ed');
+            function select(name) {
+                tabs.forEach(function (t) {
+                    var on = t.getAttribute('data-tab') === name;
+                    t.classList.toggle('active', on);
+                    t.setAttribute('aria-selected', on ? 'true' : 'false');
+                });
+                panelTw.hidden = (name !== 'tw');
+                panelEd.hidden = (name !== 'ed');
+            }
+            tabs.forEach(function (t) {
+                t.addEventListener('click', function () { select(t.getAttribute('data-tab')); });
+            });
+            Array.prototype.slice.call(document.querySelectorAll('[data-tab-link]')).forEach(function (a) {
+                a.addEventListener('click', function () { select(a.getAttribute('data-tab-link')); });
+            });
+            if (location.hash === '#editing') { select('ed'); }
+        })();
+    </script>
 </body>
 </html>
