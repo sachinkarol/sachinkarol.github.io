@@ -62,7 +62,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+        .container { max-width: 880px; margin: 0 auto; padding: 0 28px; }
 
         /* ── NAV ── */
         nav {
@@ -74,30 +74,33 @@
         }
         .nav-name {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px; font-weight: 500;
+            font-size: 14px; font-weight: 500;
             letter-spacing: 0.10em;
             color: var(--text-muted);
             text-transform: uppercase;
             text-decoration: none;
         }
-        .nav-back {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px; font-weight: 500;
-            letter-spacing: 0.08em;
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 500;
             color: var(--text-secondary);
             text-decoration: none;
-            text-transform: uppercase;
+            letter-spacing: 0.02em;
             transition: color 0.15s ease;
         }
-        .nav-back:hover { color: var(--accent); }
-        .nav-back::before { content: '\2190  '; }
+        .nav-links a:hover { color: var(--accent); }
 
         /* ── ARTICLE HEADER ── */
         .doc-head { padding: 56px 0 36px; border-bottom: 1px solid var(--border); }
         .doc-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
         .doc-tag {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 9px; font-weight: 500;
+            font-size: 11px; font-weight: 500;
             letter-spacing: 0.14em; text-transform: uppercase;
             color: var(--tag-text); background: var(--tag-bg);
             padding: 3px 8px; border-radius: 2px;
@@ -151,7 +154,7 @@
 
         /* ── TABLE ── */
         .table-scroll { overflow-x: auto; margin: 18px 0 8px; border: 1px solid var(--border); border-radius: 4px; -webkit-overflow-scrolling: touch; }
-        table { border-collapse: collapse; width: 100%; min-width: 720px; background: var(--surface); font-size: 13px; }
+        table { border-collapse: collapse; width: 100%; table-layout: fixed; background: var(--surface); font-size: 13px; }
         thead th {
             font-family: 'IBM Plex Mono', monospace;
             font-size: 10px; font-weight: 500;
@@ -161,12 +164,12 @@
             border-bottom: 1px solid var(--border);
             vertical-align: bottom;
         }
-        tbody td { padding: 12px 14px; color: var(--text-secondary); line-height: 1.55; vertical-align: top; border-bottom: 1px solid var(--border); }
+        tbody td { padding: 12px 14px; color: var(--text-secondary); line-height: 1.55; vertical-align: top; border-bottom: 1px solid var(--border); overflow-wrap: break-word; word-break: break-word; }
         tbody tr:last-child td { border-bottom: none; }
         tbody th {
             padding: 12px 14px; text-align: left; vertical-align: top;
             font-weight: 600; color: var(--text-primary);
-            border-bottom: 1px solid var(--border); white-space: nowrap;
+            border-bottom: 1px solid var(--border); overflow-wrap: break-word; word-break: break-word;
         }
         tbody tr:last-child th { border-bottom: none; }
         .table-hint {
@@ -187,8 +190,8 @@
         .refs a:hover { text-decoration: underline; }
 
         /* ── FOOTER ── */
-        footer { padding: 30px 0; border-top: 1px solid var(--border); margin-top: 20px; }
-        .footer-text { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--text-muted); letter-spacing: 0.08em; }
+        footer { padding: 32px 0; border-top: 1px solid var(--border); margin-top: 8px; }
+        .footer-text { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--text-muted); letter-spacing: 0.08em; }
 
         @media (max-width: 620px) {
             .doc-head { padding: 40px 0 28px; }
@@ -199,7 +202,7 @@
         /* ── PRINT (for PDF generation) ── */
         @media print {
             body { background: #fff; font-size: 11pt; }
-            nav, .doc-actions, .nav-back, footer, .table-hint { display: none; }
+            nav, .doc-actions, .nav-links, footer, .table-hint { display: none; }
             .container { max-width: 100%; padding: 0; }
             .table-scroll { overflow: visible; border: none; }
             table { min-width: 0; width: 100%; table-layout: fixed; font-size: 7.5pt; }
@@ -220,7 +223,13 @@
 
         <nav aria-label="Site navigation">
             <a href="index.html" class="nav-name">Sachin Karol</a>
-            <a href="index.html#portfolio" class="nav-back">Back to portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html#portfolio">Technical Writing</a></li>
+                <li><a href="index.html#editing">Editing</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="assets/Sachin-Karol-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
         </nav>
 
         <header class="doc-head">
@@ -362,7 +371,6 @@
                     </tbody>
                 </table>
             </div>
-            <p class="table-hint">Scroll the table horizontally to see all columns.</p>
 
             <h2>Glossary</h2>
             <dl>
