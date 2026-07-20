@@ -330,6 +330,32 @@
             font-size: 12px;
         }
 
+        .card-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .card-link-alt {
+            display: inline-flex;
+            align-items: center;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.10em;
+            color: var(--text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.15s ease;
+        }
+
+        .card-link-alt:hover {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
         .coming-soon .card-link {
             color: var(--text-muted);
             cursor: default;
@@ -561,57 +587,58 @@
             <div class="tab-panel" id="panel-ed" role="tabpanel" aria-labelledby="tab-ed" hidden>
                 <p class="panel-intro">Annotated before/after edits on open-access (CC-BY) research excerpts, each showing tracked changes and the editorial reasoning behind them, across the sciences.</p>
                 <div class="portfolio-grid">
+                    <article class="portfolio-card">
+                        <div class="doc-tags" aria-label="Document types">
+                            <span class="doc-tag">Before / After</span>
+                            <span class="doc-tag">Medical Physics</span>
+                            <span class="doc-tag">Machine Learning</span>
+                        </div>
+                        <h2 class="card-title">Neural Network for Brachytherapy Outcomes</h2>
+                        <p class="card-description">
+                            Substantive edit of an open-access preprint applying a neural network to
+                            cervical-cancer brachytherapy outcomes. The markup queries a dose-unit error
+                            and a misstated statistical assumption, and defines abbreviations at first use.
+                        </p>
+                        <div class="card-links">
+                            <a href="assets/brachytherapy-ann-editing-sample.pdf" class="card-link" target="_blank" rel="noopener noreferrer" aria-label="View brachytherapy editing markup">View markup</a>
+                            <a href="assets/brachytherapy-ann-editing-sample.docx" class="card-link-alt" aria-label="Download brachytherapy editing sample Word file">Download .docx</a>
+                        </div>
+                    </article>
 
-                    <article class="portfolio-card coming-soon" aria-label="Upcoming editing sample">
-                        <div class="doc-tags">
+                    <article class="portfolio-card">
+                        <div class="doc-tags" aria-label="Document types">
                             <span class="doc-tag">Before / After</span>
                             <span class="doc-tag">Materials Science</span>
+                            <span class="doc-tag">Machine Learning</span>
                         </div>
-                        <h2 class="card-title">Editing Sample 1</h2>
+                        <h2 class="card-title">Physics-Assisted ML for Concrete Cracking</h2>
                         <p class="card-description">
-                            Annotated substantive edit of a CC-BY materials-science excerpt.
-                            Source paper to be selected.
+                            Substantive edit of an open-access preprint using physics-guided machine learning
+                            to predict cracking in recycled aggregate concrete. Dense phrasing tightened and
+                            terminology made consistent, with margin notes on usage rules.
                         </p>
-                        <span class="card-link">In progress</span>
+                        <div class="card-links">
+                            <a href="assets/rac-cracking-ml-editing-sample.pdf" class="card-link" target="_blank" rel="noopener noreferrer" aria-label="View recycled aggregate concrete editing markup">View markup</a>
+                            <a href="assets/rac-cracking-ml-editing-sample.docx" class="card-link-alt" aria-label="Download recycled aggregate concrete editing sample Word file">Download .docx</a>
+                        </div>
                     </article>
 
-                    <article class="portfolio-card coming-soon" aria-label="Upcoming editing sample">
-                        <div class="doc-tags">
+                    <article class="portfolio-card">
+                        <div class="doc-tags" aria-label="Document types">
                             <span class="doc-tag">Before / After</span>
-                            <span class="doc-tag">Life Sciences</span>
+                            <span class="doc-tag">Materials Science</span>
+                            <span class="doc-tag">Biomaterials</span>
                         </div>
-                        <h2 class="card-title">Editing Sample 2</h2>
+                        <h2 class="card-title">Zirconia-Toughened Alumina for Hip Implants</h2>
                         <p class="card-description">
-                            Annotated substantive edit of a CC-BY life-sciences excerpt.
-                            Source paper to be selected.
+                            Substantive edit of an open-access tribology preprint on a ceramic biomaterial for
+                            total hip implants. The markup flags a bioinert/bioactive contradiction and a
+                            missing central keyword, alongside edits for concision and consistency.
                         </p>
-                        <span class="card-link">In progress</span>
-                    </article>
-
-                    <article class="portfolio-card coming-soon" aria-label="Upcoming editing sample">
-                        <div class="doc-tags">
-                            <span class="doc-tag">Before / After</span>
-                            <span class="doc-tag">Energy / Environment</span>
+                        <div class="card-links">
+                            <a href="assets/zta-hip-implant-editing-sample.pdf" class="card-link" target="_blank" rel="noopener noreferrer" aria-label="View zirconia-toughened alumina editing markup">View markup</a>
+                            <a href="assets/zta-hip-implant-editing-sample.docx" class="card-link-alt" aria-label="Download zirconia-toughened alumina editing sample Word file">Download .docx</a>
                         </div>
-                        <h2 class="card-title">Editing Sample 3</h2>
-                        <p class="card-description">
-                            Annotated substantive edit of a CC-BY energy or environmental-science
-                            excerpt. Source paper to be selected.
-                        </p>
-                        <span class="card-link">In progress</span>
-                    </article>
-
-                    <article class="portfolio-card coming-soon" aria-label="Upcoming editing sample">
-                        <div class="doc-tags">
-                            <span class="doc-tag">Before / After</span>
-                            <span class="doc-tag">Physics / Engineering</span>
-                        </div>
-                        <h2 class="card-title">Editing Sample 4</h2>
-                        <p class="card-description">
-                            Annotated substantive edit of a CC-BY physics or engineering excerpt.
-                            Source paper to be selected.
-                        </p>
-                        <span class="card-link">In progress</span>
                     </article>
 
                 </div>
