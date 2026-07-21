@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API reference for a surf-conditions data service: endpoint description, path and query parameters, an example request, and a full response schema with field-level definitions.">
+    <link rel="canonical" href="https://sachinkarol.com/surf-report-api-reference.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sachinkarol.com/surf-report-api-reference.html">
+    <meta property="og:title" content="Surf Report API Reference">
+    <meta property="og:description" content="API reference for a surf-conditions data service: endpoint description, path and query parameters, an example request, and a full response schema with field-level definitions.">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Surf Report API Reference",
+      "description": "API reference for a surf-conditions data service: endpoint description, path and query parameters, an example request, and a full response schema with field-level definitions.",
+      "author": {
+        "@type": "Person",
+        "name": "Sachin Karol",
+        "url": "https://sachinkarol.com/"
+      },
+      "about": ["Technical writing", "API documentation", "Developer documentation", "REST API"],
+      "inLanguage": "en"
+    }
+    </script>
+    <title>Surf Report API Reference · Sachin Karol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-4qMAC16k6VtDKYgrmZa1h.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:             #F4F7FB;
+            --surface:        #FFFFFF;
+            --text-primary:   #1A2B3C;
+            --text-secondary: #4A5C6E;
+            --text-muted:     #5C6E80;
+            --accent:         #2563EB;
+            --accent-hover:   #1D4ED8;
+            --tag-bg:         #E8F0FE;
+            --tag-text:       #1A4CC8;
+            --border:         #DDE4EE;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 880px; margin: 0 auto; padding: 0 28px; }
+
+        /* ── NAV ── */
+        nav {
+            padding: 28px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-name {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px; font-weight: 500;
+            letter-spacing: 0.10em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.15s ease;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* ── ARTICLE HEADER ── */
+        .doc-head { padding: 56px 0 36px; border-bottom: 1px solid var(--border); }
+        .doc-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
+        .doc-tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px; font-weight: 500;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--tag-text); background: var(--tag-bg);
+            padding: 3px 8px; border-radius: 2px;
+        }
+        h1 {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: clamp(30px, 5vw, 42px);
+            font-weight: 700; line-height: 1.12;
+            letter-spacing: -0.02em; color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+        .doc-meta {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px; letter-spacing: 0.06em;
+            color: var(--text-muted); text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .doc-meta span + span::before { content: ' · '; }
+        .doc-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px; font-weight: 500;
+            letter-spacing: 0.10em; text-transform: uppercase;
+            text-decoration: none; padding: 9px 16px; border-radius: 3px;
+            transition: all 0.15s ease;
+        }
+        .btn-primary { color: #fff; background: var(--accent); }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-ghost { color: var(--accent); border: 1px solid var(--border); background: var(--surface); }
+        .btn-ghost:hover { border-color: var(--accent); }
+
+        /* ── ARTICLE BODY ── */
+        article { padding: 8px 0 40px; }
+        article h2 {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 24px; font-weight: 700;
+            letter-spacing: -0.01em; color: var(--text-primary);
+            margin: 46px 0 8px; padding-top: 18px;
+            border-top: 1px solid var(--border);
+        }
+        article h2.no-rule { border-top: none; padding-top: 0; }
+        article h3 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 13px; font-weight: 600;
+            letter-spacing: 0.04em; text-transform: uppercase;
+            color: var(--accent); margin: 24px 0 6px;
+        }
+        article p { color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+        article .lede { font-size: 17px; color: var(--text-secondary); }
+
+        /* ── TABLE ── */
+        .table-scroll { overflow-x: auto; margin: 18px 0 8px; border: 1px solid var(--border); border-radius: 4px; -webkit-overflow-scrolling: touch; }
+        table { border-collapse: collapse; width: 100%; table-layout: fixed; background: var(--surface); font-size: 13px; }
+        thead th {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            color: var(--text-primary); text-align: left;
+            padding: 12px 14px; background: var(--tag-bg);
+            border-bottom: 1px solid var(--border);
+            vertical-align: bottom;
+        }
+        tbody td { padding: 12px 14px; color: var(--text-secondary); line-height: 1.55; vertical-align: top; border-bottom: 1px solid var(--border); overflow-wrap: break-word; word-break: break-word; }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody th {
+            padding: 12px 14px; text-align: left; vertical-align: top;
+            font-weight: 600; color: var(--text-primary);
+            border-bottom: 1px solid var(--border); overflow-wrap: break-word; word-break: break-word;
+        }
+        tbody tr:last-child th { border-bottom: none; }
+        .table-hint {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 10px; color: var(--text-muted);
+            letter-spacing: 0.04em; margin-bottom: 20px;
+        }
+
+        /* ── GLOSSARY ── */
+        dl { margin: 8px 0; }
+        dt { font-weight: 600; color: var(--text-primary); margin-top: 16px; }
+        dd { color: var(--text-secondary); line-height: 1.7; margin-left: 0; }
+
+        /* ── REFERENCES ── */
+        .refs { list-style: none; }
+        .refs li { color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; padding-left: 18px; text-indent: -18px; font-size: 14px; }
+        .refs a { color: var(--accent); text-decoration: none; word-break: break-word; }
+        .refs a:hover { text-decoration: underline; }
+
+        /* ── FOOTER ── */
+        footer { padding: 32px 0; border-top: 1px solid var(--border); margin-top: 8px; }
+        .footer-text { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--text-muted); letter-spacing: 0.08em; }
+
+        @media (max-width: 620px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+                padding: 20px 0;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 14px 20px;
+                padding-left: 0;
+            }
+            .doc-head { padding: 40px 0 28px; }
+            article h2 { font-size: 21px; }
+        }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+        /* ── PRINT (for PDF generation) ── */
+        @media print {
+            body { background: #fff; font-size: 11pt; }
+            nav, .doc-actions, .nav-links, footer, .table-hint { display: none; }
+            .container { max-width: 100%; padding: 0; }
+            .table-scroll { overflow: visible; border: none; }
+            table { min-width: 0; width: 100%; table-layout: fixed; font-size: 7.5pt; }
+            thead th, tbody td, tbody th { padding: 5px 7px; white-space: normal; word-break: break-word; overflow-wrap: break-word; }
+            thead th:nth-child(1) { width: 15%; }
+            thead th:nth-child(2) { width: 22%; }
+            thead th:nth-child(3) { width: 21%; }
+            thead th:nth-child(4) { width: 21%; }
+            thead th:nth-child(5) { width: 21%; }
+            article h2 { page-break-after: avoid; }
+            article h3 { page-break-after: avoid; }
+            p, li { orphans: 3; widows: 3; }
+        }
+            article ul { margin: 12px 0 12px 22px; }
+        article li { margin: 7px 0; color: var(--text-secondary); line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <nav aria-label="Site navigation">
+            <a href="index.html" class="nav-name">Sachin Karol</a>
+            <ul class="nav-links">
+                <li><a href="index.html#portfolio">Technical Writing</a></li>
+                <li><a href="index.html#editing">Editing</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="assets/sachin-karol-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header class="doc-head">
+            <div class="doc-tags" aria-label="Document types">
+                <span class="doc-tag">API Reference</span>
+                <span class="doc-tag">Developer Docs</span>
+            </div>
+            <h1>Surf Report API Reference</h1>
+            <p class="doc-meta"><span>Sachin Karol</span></p>
+            <div class="doc-actions">
+                <a href="assets/surf-report-api-reference.pdf" class="btn btn-primary" target="_blank" rel="noopener" aria-label="View Surf Report API Reference PDF">View PDF</a>
+                <a href="index.html#portfolio" class="btn btn-ghost">More work</a>
+            </div>
+        </header>
+
+        <article>
+            <h2 class="no-rule">About this sample</h2>
+            <p class="lede">API reference for a surf conditions data service: endpoint description, path and query parameters, an example request, and a full response schema with field-level definitions. Adapted and extended from Tom Johnson's Documenting APIs course exercise.</p>
+
+            <h2>What it demonstrates</h2>
+            <ul>
+                <li>A GET surfreport/{beachId} endpoint with a clear resource description.</li>
+                <li>Path and query parameters (appid, days, time, units) documented in reference tables.</li>
+                <li>A copy-paste curl request example.</li>
+                <li>A full JSON response example followed by a field-by-field response-definitions table.</li>
+            </ul>
+        </article>
+
+        <footer>
+            <p class="footer-text">Sachin Karol &middot; Toronto &middot; 2026</p>
+        </footer>
+
+    </div>
+</body>
+</html>
