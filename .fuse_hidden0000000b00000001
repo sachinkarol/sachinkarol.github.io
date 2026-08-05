@@ -1,0 +1,79 @@
+# Metallic Corrosion: A Field Reference for Project Engineers
+
+**Author:** Sachin Karol
+**Date:** June 2026
+
+## Introduction
+
+Corrosion is a naturally occurring chemical or electrochemical process between a metal and its environment that results in the degradation of the metal and its properties. It is of critical importance in marine and infrastructure construction for both cost and safety reasons. The Association for Materials Protection and Performance reports that losses owing to corrosion are as high as $2.5 trillion USD annually, which is approximately 3.4% of the global Gross Domestic Product. Depending on the metal and corroding environment involved, corrosion can be classified as either uniform or localized (galvanic, pitting, crevice, stress corrosion cracking, and erosion corrosion). Corrosion-related decisions are typically made by engineers and involve choosing the appropriate metal and methods of mitigating its corrosion. Because corrosion mechanisms vary significantly, so do strategies for preventing it. This document is a guide for personnel working in marine or infrastructure construction environments who need to identify corrosion types, understand their causes, and make informed mitigation decisions.
+
+## How to Use This Guide
+
+This guide describes each corrosion type across four subsections: what it is, how to identify it, what drives it, and how to mitigate it. It also includes a reference table for quick lookup. Finally, it includes a glossary of the key terms used throughout the guide.
+
+## Uniform Corrosion
+### What It Is
+Uniform corrosion is the most common form of corrosion and is characterized by corrosion over the entire or a large portion of the surface area of the metal. It tends to occur on uniform surfaces lacking preferential sites for attack.
+
+### How to Identify It
+In most cases, it can be identified based on changes in appearance such as discoloration. It usually results in uniform etching or the formation of a rust layer and can be predicted based on measurable reductions in the thickness of the corroded structure.
+
+### What Drives It
+It is generally caused by exposure to oxygen, moisture, acids, or salts. Marine and infrastructure environments are particularly conducive to uniform corrosion because of the simultaneous presence of saltwater and high humidity and atmospheric exposure.
+
+### How to Mitigate It
+It can be mitigated by using protective coatings on the exposed surface. Other options include cathodic protection (using sacrificial anodes or an impressed current system to direct the corrosive attack away from the primary structure), controlling environmental factors such as humidity and pH, and using chemical corrosion inhibitors.
+
+## Galvanic Corrosion
+### What It Is
+Galvanic corrosion is the result of an electrochemical reaction in a galvanic cell, which is formed when two dissimilar metals in electrical contact are submerged or wetted by an electrolyte. Current flows from the anode (the more reactive or less noble metal) to the cathode (the less reactive or more noble metal) through the electrolyte, and from the cathode to the anode through the metallic connection. The anode oxidizes and loses material, while the cathode is protected. The driving force is the difference in the electrode potentials of the two metals. Metals can be ranked in a galvanic series based on their corrosion potential in a given electrolyte. Metals closer in the series are safer to use together than those far apart.
+
+### How to Identify It
+Corrosion occurs at or near the junction between the two different metals. The anode metal shows pitting or wastage, while the cathode remains visually clean or may show deposits. In addition, a white or powdery deposit at the interface often indicates that the anode is aluminum or zinc.
+
+### What Drives It
+Galvanic corrosion occurs when the following three conditions are met: the presence of dissimilar metals, an electrical contact between them, and their exposure to a common electrolyte. The driving force is the difference in the electrode potentials of the two metals. However, the most critical factor is the area ratio of the anode and cathode. A small anode coupled to a large cathode results in aggressive corrosion. The anodic current density is high, leading to rapid and concentrated material loss. On the other hand, a large anode coupled to a small cathode is relatively benign. This is why copper rivets in a steel plate are less damaging than steel rivets in a copper plate.
+
+### How to Mitigate It
+Strategies for mitigation include using compatible metals together (closer in the galvanic series), breaking the electrical path by using nonconductive gaskets, sleeves, or coatings, applying a protective coating to the cathode instead of the anode (coating the anode alone concentrates attacks at any coating defects), using sacrificial anodes (zinc or magnesium deliberately coupled to the structure to be the preferential anode), and designing to ensure a favorable area ratio.
+
+## Pitting Corrosion
+### What It Is
+Pitting corrosion is similar to galvanic corrosion in that it also involves an electrochemical galvanic reaction. However, pitting occurs on a single metal, when its naturally forming passive oxide film coating breaks down. Metals particularly susceptible to it include stainless steel and aluminum; titanium is susceptible only at elevated temperatures.
+
+### How to Identify It
+It can be identified based on the presence of small pits or perforations on the metal surface and a rough or undercut interior. The pits may be obscured by corrosion products, but the surrounding surface is usually intact.
+
+### What Drives It
+Pitting requires a susceptible metal, an aggressive ion (chloride is the primary one in marine and infrastructure settings), and a local breakdown site. It is driven by the breakdown of the thin passive oxide film that forms naturally on metals in the presence of ions such as chloride, leading to small anodic sites, while the surrounding intact surface film acts as the cathode. This results in small galvanic cells. Once such pits form, the chemistry within them changes. The local environment becomes acidic and depleted of oxygen, which prevents the passive film from reforming. The pits accelerate their own growth. Thus, while the surface can look nearly pristine, the pits can propagate deep into the material. Hence, pitting can be extremely dangerous, as the visible damage may dramatically understate the actual penetration.
+
+### How to Mitigate It
+Mitigation strategies include using alloys with higher pitting resistance (pitting resistance is quantified by the PREN, or Pitting Resistance Equivalent Number, in stainless steels), avoiding chloride-containing environments, maintaining the thin passive film through surface treatments or coatings, using cathodic protection, and using designs that avoid stagnant zones where aggressive ions can concentrate.
+
+## Crevice Corrosion
+
+### What It Is
+Crevice corrosion is a highly localized form of corrosion that occurs in narrow gaps or crevices between two surfaces, where a stagnant electrolyte gets trapped. These gaps can be metal-to-metal or metal-to-nonmetal. The trapped electrolyte becomes isolated from the bulk electrolyte. The oxygen within the crevices is depleted rapidly, resulting in an oxygen concentration cell: the crevice interior becomes anodic (corrodes) while the exterior surface becomes cathodic (protected). This turns the interior environment of the crevices even more acidic and chloride-enriched, thus accelerating the attack. This self-reinforcing chemistry is sometimes called the autocatalytic mechanism.
+
+### How to Identify It
+Damage is confined to or just outside the crevice, while the surrounding surfaces look intact. Common corrosion sites include under fasteners, gaskets, threaded connections, lap joints, and bolt heads. It is also found under marine growth and debris. It is often invisible until the joint is disassembled. It can be distinguished from pitting by its location: pitting initiates on open surfaces while crevice corrosion requires a geometric trap.
+
+### What Drives It
+It is primarily driven by gap geometry. Gaps wide enough (roughly 0.025 to 0.1 mm for stainless steel) to allow an electrolyte in but narrow enough to restrict its flow initiate it. High chloride concentration and temperature, and low oxygen availability all accelerate it. Passive alloys (stainless steels, aluminum, and, at elevated temperatures, titanium) are particularly susceptible because their passive film depends on oxygen to maintain itself.
+
+### How to Mitigate It
+It can be mitigated through careful design and maintenance. Mitigation strategies include design optimization (avoiding lap joints, bolted connections, or rivets where possible), sealing gaps using appropriate gasket materials and sealants, selecting suitable material (alloys with higher resistance to chlorides, such as molybdenum-containing stainless steels), and performing regular maintenance (removing debris and flushing out stagnant areas). One should also avoid wrapping metals with moisture-retaining materials like plastic or tape. Cathodic protection is also a widely used option.
+
+## Stress Corrosion Cracking
+
+### What It Is
+Stress corrosion cracking (SCC) is the deterioration of a susceptible metal alloy via the formation of microscopic cracks in it when it is subjected to sustained tensile stress in a particular corrosive environment. All three factors must be present for SCC to occur, which can lead to sudden rupture and brittle-type failure of ductile materials with little to no visible loss of material.
+
+### How to Identify It
+SCC is particularly difficult to identify because the cracks initiate at the microscale, and the alloy surface usually looks completely normal right up until it suddenly fails. SCC results in the formation of cracks with a "lightning bolt" pattern perpendicular to the tensile stress (the surrounding metal surface usually has little to no rust or overall corrosion damage). To identify it in the field, one must look for these microscopic cracks using non-destructive methods such as dye penetrant and ultrasonic inspection. Inspection in the lab involves analyzing a sample under a microscope for intergranular (along grain boundaries) or transgranular (through the grains) cracks.
+
+### What Drives It
+The three conditions (susceptible alloy, sustained tensile stress, and specific corrosive environment) must be met. The stress can be applied or residual (from welding or cold forming). In fact, residual stress is often the greater contributor. The environment-alloy pairing is specific: chlorides with austenitic stainless steel (used extensively in marine applications), ammonia with brass, caustic solutions with carbon steel. Elevated temperatures accelerate chloride SCC significantly, typically above roughly 50-60°C.
+
+### How to Mitigate It
+It can be mitigated by removing one of the three factors. Strategies include reducing the tensile stress (post-weld stress-relief annealing, avoiding stress concentrators during design, shot peening to compress the surface), selecting resistant materials (duplex stainless steels or higher-nickel alloys for chloride environments), or controlling the environment (limit chloride concentration and temperature). Coatings and cathodic protection can also help; however, cathodic protection on high-strength steels can introduce hydrogen embrittlement, a related but distinct cracking mechanism.
